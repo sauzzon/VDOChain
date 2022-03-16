@@ -1,5 +1,7 @@
+import LandingPage from "./components/landing";
+
 function App() {
-  return <h1>VDO Chain</h1>;
+  return <LandingPage></LandingPage>;
 }
 
 export default App;
