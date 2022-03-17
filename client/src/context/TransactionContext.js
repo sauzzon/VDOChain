@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { ethers } from "ethers";
+import React, { useState } from "react";
+// import { ethers } from "ethers";
 
-import { contractABI, contractAddress } from "../utils/constants";
+// import { contractABI, contractAddress } from "../utils/constants";
 export const TransactionContext = React.createContext();
 
-const { ethereum } = window;
+// const { ethereum } = window;
 
-const createEthereumContract = () => {
-  const provider = new ethers.providers.Web3Provider(ethereum);
-  const signer = provider.getSigner();
-  const vdoContract = new ethers.Contract(contractAddress, contractABI, signer);
+// const createEthereumContract = () => {
+//   const provider = new ethers.providers.Web3Provider(ethereum);
+//   const signer = provider.getSigner();
+//   const vdoContract = new ethers.Contract(contractAddress, contractABI, signer);
 
-  return vdoContract;
-};
+//   return vdoContract;
+// };
 
 export const TransactionsProvider = ({ children }) => {
   const [currentAccount, setCurrentAccount] = useState("");

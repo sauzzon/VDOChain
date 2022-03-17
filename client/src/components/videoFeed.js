@@ -13,14 +13,14 @@ const VideoFeed = () => {
       return navigate("/");
     } else {
     }
-  }, []);
+  }, [currentAccount, navigate]);
 
   return (
     <center>
-      <h4>{currentAccount}</h4>
-      <h3>Upload, View and Share Videos</h3>
-      <Button component={Link} to="/" variant="contained">
-        Goto Home
+      <h4>Welcome, {currentAccount} </h4>
+
+      <Button variant="contained" component={Link} to="/upload">
+        Upload Video
       </Button>
     </center>
   );
